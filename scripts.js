@@ -10,7 +10,6 @@ function generateGrid(n) {
         square.classList.add("square");
         square.style.width = `calc(100%/${n})`;
         square.style.height = `calc(100%/${n})`;
-        square.textContent=i;
         square.addEventListener("mouseenter", function(e) {
             //knew correct target, each square had the listener, but value for square still saved
             e.target.style.backgroundColor="black";
@@ -23,6 +22,12 @@ const submit = document.querySelector("#submit");
 submit.addEventListener("click", function() {
     const gridSize = document.querySelector("input");
     generateGrid(gridSize.value);
+});
+
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", function() {
+    let squares = document.querySelectorAll(".square");
+    squares.forEach(square => square.style.backgroundColor="white");
 });
 
 let defaultSize = 16
