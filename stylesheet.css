@@ -1,6 +1,12 @@
+#sketch-screen {
+    width: calc(min(90vw, 90vh));
+    height: calc(min(90vw, 90vh));
+    display: flex;
+    flex-wrap: wrap;
+    border: 8px solid grey;
+}
+
 .square {
+    box-sizing: border-box;
     border: 2px solid black;
-    margin: 5px;
-    width: 50px;
-    height: 50px;
 }
